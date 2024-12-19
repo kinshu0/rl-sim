@@ -1,0 +1,26 @@
+# This is a comment - Default target
+
+PLATFORM ?= PLATFORM_DESKTOP
+
+say_hello: hello world
+	@echo "Full message: Hello World!"
+
+
+splat:
+	@echo "printing platform: $(PLATFORM)"
+
+# Individual word targets
+hello:
+	@echo "Hello"
+
+world:
+	@echo "World"
+
+# Clean target (good practice to include)
+clean:
+	@echo "Cleaning up..."
+
+# A target with variables to play with
+greet:
+	$(eval NAME ?= User)
+	@echo "Hello, $(NAME)!"
